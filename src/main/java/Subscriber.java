@@ -7,9 +7,12 @@ import supporters.MessageContent;
 
 import java.net.URI;
 import java.util.Base64;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class Subscriber {
+    private static final String BROKER_PASSWORD = Optional.ofNullable(System.getenv("BROKER_PASSWORD"))
+            .orElseThrow(() -> new IllegalStateException("Environment variable 'BROKER_PASSWORD' is not set"));
     private QuicClientConnection connection;
     private String username;
     private String sessionKey;
@@ -18,15 +21,14 @@ public class Subscriber {
         Scanner sc = new Scanner(System.in);
         this.sessionKey = "PUB_" + System.currentTimeMillis();
 
-        // v0.10.8 uses this signature: applicationProtocol(String, ApplicationProtocolConnection)
         connection = QuicClientConnection.newBuilder()
-                .uri(URI.create("https://localhost:4433"))
-                .applicationProtocol(Alpn.PROTOCOL, new SecurePushHandler()) 
+                .uri(URI.create("https://localhost:8443"))
+                .applicationProtocol(Alpn.PROTOCOL) // Adjusted to match the expected single argument
                 .noServerCertificateCheck()
                 .build();
         
         connection.connect();
-        System.out.println("Connected to SmartFlow Broker.");
+        System.out.println("Connected to the broker with secure configuration.");
 
         while (true) {
             System.out.println("\n--- SmartFlow Subscriber Menu ---");

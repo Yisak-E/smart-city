@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f8a9118-fc41-4eff-8309-eada98ebae78" name="Changes" comment="Refactor project structure and update connection handling for smart city application" />
+    <list default="true" id="4f8a9118-fc41-4eff-8309-eada98ebae78" name="Changes" comment="Refactor project structure and update connection handling for smart city application">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Broker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Broker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Broker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Broker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/smart_city/smart_city/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/smart_city/smart_city/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Publisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Publisher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/QuicProtocolConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/QuicProtocolConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/QuicProtocolFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/QuicProtocolFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Subscriber$SecurePushHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Subscriber$SecurePushHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Subscriber.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Subscriber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/smart_city/Alpn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/smart_city/Alpn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/smart_city/MessageUtill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/smart_city/MessageUtill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supporters/MessageContent$Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supporters/MessageContent$Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supporters/MessageContent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supporters/MessageContent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supporters/Metadata.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supporters/Metadata.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +55,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Broker.executor": "Run",
+    "Application.Publisher.executor": "Run",
     "Application.QuicServer.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -50,20 +72,50 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "show.migrate.to.gradle.popup": "false",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="QuicServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="QuicServer" />
-      <module name="quic-lab2.2" />
+  <component name="RunManager" selected="Application.Publisher">
+    <configuration name="Broker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Broker" />
+      <module name="smart_city" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Publisher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Publisher" />
+      <module name="smart_city" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuicServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="QuicServer" />
+      <module name="smart_city" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="smart_city" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="smart_city" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Broker" />
+        <item itemvalue="Application.Publisher" />
         <item itemvalue="Application.QuicServer" />
       </list>
     </recent_temporary>
@@ -87,7 +139,7 @@
       <workItem from="1775754886281" duration="1062000" />
       <workItem from="1775762957390" duration="6211000" />
       <workItem from="1775817112974" duration="3000" />
-      <workItem from="1775817129421" duration="305000" />
+      <workItem from="1775817129421" duration="4466000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor project structure and update connection handling for smart city application">
       <option name="closed" value="true" />
