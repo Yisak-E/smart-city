@@ -3,7 +3,7 @@ package supporters;
 import java.io.Serializable;
 
 public class MessageContent implements Serializable {
-    public enum Type { SIGNUP, LOGIN, PUBLISH, SUBSCRIBE, ACK, ERROR }
+    public enum Type { SIGNUP, LOGIN, PUBLISH, SUBSCRIBE, ACK, ERROR, RESEND }
 
     private Type type;
     private String sender;    

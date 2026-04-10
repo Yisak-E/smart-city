@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f8a9118-fc41-4eff-8309-eada98ebae78" name="Changes" comment="ADD: implement simulated event publishing and update connection handling in Broker and Publisher">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SimulatedSubscriber.java" afterDir="false" />
+    <list default="true" id="4f8a9118-fc41-4eff-8309-eada98ebae78" name="Changes" comment="ADD: implement SimulatedSubscriber for event listening and enhance CSV parsing in SimulatedPublisher">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SimulatedPublisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SimulatedPublisher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SimulatedPublisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SimulatedPublisher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QuicProtocolConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QuicProtocolConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SimulatedSubscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SimulatedSubscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supporters/MessageContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supporters/MessageContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Publisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Publisher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/QuicProtocolConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/QuicProtocolConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Subscriber$SecurePushHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Subscriber$SecurePushHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Subscriber.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Subscriber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/supporters/MessageContent$Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supporters/MessageContent$Type.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +51,9 @@
     "Application.Publisher.executor": "Run",
     "Application.QuicServer.executor": "Run",
     "Application.SimulatedPublisher.executor": "Run",
+    "Application.SimulatedSubscriber.executor": "Run",
+    "Application.Subscriber (1).executor": "Run",
+    "Application.Subscriber.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -65,23 +75,9 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.SimulatedSubscriber">
-    <configuration name="Broker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Broker" />
-      <module name="smart_city" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Publisher">
     <configuration name="Publisher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Publisher" />
-      <module name="smart_city" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuicServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="QuicServer" />
       <module name="smart_city" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -101,6 +97,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Subscriber (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Subscriber" />
+      <module name="smart_city" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Subscriber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Subscriber" />
+      <module name="smart_city" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="smart_city" />
       <method v="2">
@@ -114,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SimulatedPublisher" />
-        <item itemvalue="Application.SimulatedSubscriber" />
-        <item itemvalue="Application.Broker" />
         <item itemvalue="Application.Publisher" />
-        <item itemvalue="Application.QuicServer" />
+        <item itemvalue="Application.SimulatedPublisher" />
+        <item itemvalue="Application.Subscriber (1)" />
+        <item itemvalue="Application.Subscriber" />
+        <item itemvalue="Application.SimulatedSubscriber" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +151,7 @@
       <workItem from="1775754886281" duration="1062000" />
       <workItem from="1775762957390" duration="6211000" />
       <workItem from="1775817112974" duration="3000" />
-      <workItem from="1775817129421" duration="7266000" />
+      <workItem from="1775817129421" duration="9698000" />
     </task>
     <task id="LOCAL-00001" summary="Refactor project structure and update connection handling for smart city application">
       <option name="closed" value="true" />
@@ -167,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775824785547</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ADD: implement SimulatedSubscriber for event listening and enhance CSV parsing in SimulatedPublisher">
+      <option name="closed" value="true" />
+      <created>1775826924890</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1775826924890</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +195,8 @@
     <MESSAGE value="Refactor project structure and update connection handling for smart city application" />
     <MESSAGE value="REF: update connection handling and logging for Broker, Publisher, and Subscriber" />
     <MESSAGE value="ADD: implement simulated event publishing and update connection handling in Broker and Publisher" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD: implement simulated event publishing and update connection handling in Broker and Publisher" />
+    <MESSAGE value="ADD: implement SimulatedSubscriber for event listening and enhance CSV parsing in SimulatedPublisher" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD: implement SimulatedSubscriber for event listening and enhance CSV parsing in SimulatedPublisher" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

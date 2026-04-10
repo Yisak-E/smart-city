@@ -5,8 +5,11 @@ import smart_city.MessageUtill;
 import supporters.MessageContent;
 import java.util.*;
 import java.util.concurrent.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class QuicProtocolConnection implements ApplicationProtocolConnection {
+    private static final Logger logger = LoggerFactory.getLogger(QuicProtocolConnection.class);
     private final QuicConnection quicConnection;
     private final Map<String, List<QuicProtocolConnection>> registry;
     private String clientPublicKey;
@@ -26,17 +29,20 @@ public class QuicProtocolConnection implements ApplicationProtocolConnection {
                 if (msg.getType() == MessageContent.Type.SIGNUP) {
                     this.clientPublicKey = msg.getPayload();
                     MessageUtill.writeText(stream.getOutputStream(), "ACK|Key Registered");
-                } 
+                    logger.info("Client signed up with public key.");
+                }
                 else if (msg.getType() == MessageContent.Type.SUBSCRIBE) {
-                    // FIFO ordering per topic [cite: 24, 44]
                     registry.computeIfAbsent(msg.getTopic(), k -> new CopyOnWriteArrayList<>()).add(this);
-                    System.out.println("[BROKER] Client joined: " + msg.getTopic());
-                } 
+                    logger.info("[BROKER] Client subscribed to topic: {}", msg.getTopic());
+                }
                 else if (msg.getType() == MessageContent.Type.PUBLISH) {
                     broadcast(msg);
                     MessageUtill.writeText(stream.getOutputStream(), "ACK|Event Distributed");
+                    logger.info("[BROKER] Event published to topic: {}", msg.getTopic());
                 }
-            } catch (Exception e) { e.printStackTrace(); }
+            } catch (Exception e) {
+                logger.error("Error processing stream: {}", e.getMessage());
+            }
         }).start();
     }
 
@@ -44,19 +50,28 @@ public class QuicProtocolConnection implements ApplicationProtocolConnection {
         List<QuicProtocolConnection> subs = registry.get(msg.getTopic());
         if (subs != null) {
             for (QuicProtocolConnection sub : subs) {
-                sub.deliverSecure(msg); // Push directly to subscribers [cite: 53, 90]
+                try {
+                    sub.deliverSecure(msg);
+                    logger.info("[BROKER] Delivered message to subscriber.");
+                } catch (Exception e) {
+                    logger.error("Failed to deliver message to subscriber: {}", e.getMessage());
+                }
             }
+        } else {
+            logger.warn("No subscribers for topic: {}", msg.getTopic());
         }
     }
 
     public void deliverSecure(MessageContent msg) {
         try {
-            // Simulated encryption for confidentiality [cite: 73, 92]
             String data = msg.encode() + (clientPublicKey != null ? clientPublicKey : "");
             String encrypted = Base64.getEncoder().encodeToString(data.getBytes());
-            
+
             QuicStream pushStream = quicConnection.createStream(true);
             MessageUtill.writeText(pushStream.getOutputStream(), encrypted);
-        } catch (Exception ignored) {}
+            logger.info("[BROKER] Secure message delivered.");
+        } catch (Exception e) {
+            logger.error("Error delivering secure message: {}", e.getMessage());
+        }
     }
 }

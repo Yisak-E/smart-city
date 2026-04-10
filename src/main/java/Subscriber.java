@@ -11,8 +11,7 @@ import java.util.Optional;
 import java.util.Scanner;
 
 public class Subscriber {
-    private static final String BROKER_PASSWORD = Optional.ofNullable(System.getenv("BROKER_PASSWORD"))
-            .orElseThrow(() -> new IllegalStateException("Environment variable 'BROKER_PASSWORD' is not set"));
+    private static final String BROKER_PASSWORD = "secret";
     private QuicClientConnection connection;
     private String username;
     private String sessionKey;
