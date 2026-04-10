@@ -1,0 +1,200 @@
+TRAFFIC.accident,Multi-vehicle pileup on Bridge Road
+TRAFFIC.congestion,Bumper-to-bumper traffic on East Bypass
+TRAFFIC.roadwork,Lane closure for resurfacing on 5th Ave
+TRAFFIC.hazard,Spilled cargo blocking left lane on I-95
+TRAFFIC.congestion,Heavy delays near the sports stadium
+TRAFFIC.accident,Flipped truck at the junction of Route 4
+TRAFFIC.roadwork,Utility repairs causing delays on Main St
+TRAFFIC.hazard,Disabled vehicle in the middle lane
+TRAFFIC.congestion,Holiday rush hour traffic on North Parkway
+TRAFFIC.accident,Pedestrian involved incident at 10th and Pine
+TRAFFIC.closure,Tunnel closed for scheduled maintenance
+TRAFFIC.congestion,Gridlock in the financial district
+TRAFFIC.hazard,Debris on the road near Exit 12
+TRAFFIC.accident,Rear-end collision at the traffic lights
+TRAFFIC.roadwork,Bridge inspection causing single-lane flow
+TRAFFIC.congestion,Slow moving traffic due to rubbernecking
+TRAFFIC.hazard,Animal on the highway at mile marker 45
+TRAFFIC.accident,Motorcycle crash on the coastal road
+TRAFFIC.closure,Road closed due to structural concerns
+TRAFFIC.congestion,Morning commute delays on Westbound expressway
+TRAFFIC.hazard,Pothole causing tire damage on 2nd Blvd
+TRAFFIC.accident,Side-swipe incident on the roundabout
+TRAFFIC.roadwork,New signal installation at Cross St
+TRAFFIC.congestion,Football match crowd causing traffic surge
+TRAFFIC.hazard,Oil spill on the off-ramp
+TRAFFIC.accident,Hit and run reported at the gas station
+TRAFFIC.closure,Parade route closing downtown streets
+TRAFFIC.congestion,Airport access road heavily congested
+TRAFFIC.hazard,Icy patches reported on the overpass
+TRAFFIC.accident,Bus and car collision on Broadway
+TRAFFIC.roadwork,Night-time construction on South Circular
+TRAFFIC.congestion,Shopping mall entrance blocked by traffic
+TRAFFIC.hazard,Traffic light malfunction at busy intersection
+TRAFFIC.accident,Vehicle fire on the shoulder of the highway
+TRAFFIC.closure,Emergency road repair near the river
+TRAFFIC.congestion,Backlog of traffic due to stalled train
+TRAFFIC.hazard,Low hanging branches over the roadway
+TRAFFIC.accident,T-bone collision at the school zone
+TRAFFIC.roadwork,Temporary traffic lights on Country Lane
+TRAFFIC.congestion,Fog causing slow traffic speeds
+WEATHER.rain,Light drizzle starting in northern suburbs
+WEATHER.storm,Severe thunderstorm warning for the valley
+WEATHER.snow,Blizzard conditions expected overnight
+WEATHER.wind,High wind gusts damaging power lines
+WEATHER.fog,Dense fog reducing visibility to 50 meters
+WEATHER.heat,Extreme heatwave warning issued
+WEATHER.flood,Flash flood alert for low-lying areas
+WEATHER.hail,Large hail stones damaging vehicles
+WEATHER.rain,Persistent rain causing localized puddling
+WEATHER.snow,Light dusting of snow on the peaks
+WEATHER.storm,Lightning strikes reported in the hills
+WEATHER.wind,Gale force winds at the coastline
+WEATHER.fog,Patchy fog on the morning commute
+WEATHER.ice,Black ice warning for shaded roads
+WEATHER.rain,Tropical downpour expected this afternoon
+WEATHER.storm,Tornado watch issued for the county
+WEATHER.heat,Record-breaking temperatures in the city
+WEATHER.flood,River banks overflowing in the rural district
+WEATHER.snow,Heavy snowfall closing mountain passes
+WEATHER.wind,Dust storm moving across the plains
+WEATHER.rain,Scattered showers throughout the day
+WEATHER.storm,Squall line approaching from the West
+WEATHER.ice,Freezing rain making sidewalks slippery
+WEATHER.hail,Brief hailstorm reported in the suburbs
+WEATHER.fog,Sea fog rolling into the harbor
+WEATHER.heat,Dry heat increasing wildfire risk
+WEATHER.flood,Basement flooding reported in residential areas
+WEATHER.snow,Sleet turning into heavy snow
+WEATHER.wind,Microburst causing roof damage
+WEATHER.storm,Cyclonic activity detected offshore
+WEATHER.rain,Thundery rain predicted for the evening
+WEATHER.ice,Frost forming on bridges and overpasses
+WEATHER.fog,Ground fog causing flight delays
+WEATHER.heat,Heat advisory for elderly residents
+WEATHER.flood,Coastal flooding during high tide
+WEATHER.storm,Intense lightning causing power outages
+WEATHER.rain,Monsoon rains causing drainage issues
+WEATHER.snow,Accumulating snow on secondary roads
+WEATHER.wind,Fallen trees blocking residential streets
+WEATHER.hail,Pea-sized hail reported in the park
+EMERGENCY.fire,Structure fire at the industrial park
+EMERGENCY.medical,Paramedics dispatched for cardiac arrest
+EMERGENCY.gas,Gas leak detected in apartment complex
+EMERGENCY.fire,Brush fire spreading near the forest
+EMERGENCY.rescue,Water rescue operation at the pier
+EMERGENCY.police,Armed robbery in progress at the bank
+EMERGENCY.medical,Allergic reaction reported at the restaurant
+EMERGENCY.fire,Kitchen fire in a residential home
+EMERGENCY.gas,Sulphur smell reported in the subway
+EMERGENCY.police,High-speed chase on the interstate
+EMERGENCY.medical,Heatstroke victim at the outdoor concert
+EMERGENCY.rescue,Hiker lost in the canyon area
+EMERGENCY.fire,Electrical fire in the server room
+EMERGENCY.gas,Ruptured gas main at construction site
+EMERGENCY.police,Suspicious package found at the station
+EMERGENCY.medical,Multi-casualty incident at the factory
+EMERGENCY.fire,Vehicle fire spreading to nearby trees
+EMERGENCY.rescue,Elevator rescue in high-rise building
+EMERGENCY.police,Domestic disturbance call in the suburbs
+EMERGENCY.medical,Overdose reported in the public park
+EMERGENCY.fire,Apartment building fire on 3rd floor
+EMERGENCY.gas,Carbon monoxide alarm triggered in school
+EMERGENCY.police,Active shooter report (unconfirmed)
+EMERGENCY.medical,Child choking at the shopping mall
+EMERGENCY.rescue,Boater in distress near the reef
+EMERGENCY.fire,Warehouse fire involving chemicals
+EMERGENCY.police,Break-in reported at the warehouse
+EMERGENCY.medical,Severe trauma from a fall
+EMERGENCY.rescue,Animal rescue from the storm drain
+EMERGENCY.fire,Chimney fire in a historic home
+EMERGENCY.gas,Smell of gas in the shopping district
+EMERGENCY.police,Vandalism reported at the museum
+EMERGENCY.medical,Seizure reported on the public bus
+EMERGENCY.rescue,Caving accident rescue team deployed
+EMERGENCY.fire,Dumpster fire behind the grocery store
+EMERGENCY.police,Missing person search in the woods
+EMERGENCY.medical,Workplace injury at the shipyard
+EMERGENCY.rescue,Window washer stuck on 20th floor
+EMERGENCY.fire,Wildfire evacuation order for Zone A
+EMERGENCY.police,Crowd control requested at the protest
+UTILITY.blackout,Power outage across the North district
+UTILITY.water,Water main break on Liberty Street
+UTILITY.sewage,Sewer backup reported on Elm Ave
+UTILITY.power,Transformer explosion causing local blackout
+UTILITY.internet,Fiber optic cable cut affecting internet
+UTILITY.water,Low water pressure in the highlands
+UTILITY.gas,Scheduled gas maintenance in the village
+UTILITY.power,Power line down on the sidewalk
+UTILITY.water,Contamination warning for city water
+UTILITY.blackout,Grid failure due to storm damage
+UTILITY.sewage,Leak reported at the treatment plant
+UTILITY.internet,ISP outage affecting the business park
+UTILITY.power,Voltage fluctuations damaging appliances
+UTILITY.water,Hydrant flushing causing brown water
+UTILITY.blackout,Rolling blackouts during peak demand
+UTILITY.gas,Emergency shutoff for pipeline repair
+UTILITY.power,Substation maintenance on Sunday morning
+UTILITY.water,Reservoir levels reaching critical lows
+UTILITY.sewage,Odor complaints in the south side
+UTILITY.blackout,Substation fire causing darkness
+TRANSIT.delay,Subway Line A delayed by 20 minutes
+TRANSIT.closure,Station closed for cleaning
+TRANSIT.accident,Train derailment (minor) at the yard
+TRANSIT.delay,Bus route 42 cancelled due to driver shortage
+TRANSIT.hazard,Person on the tracks at Central Station
+TRANSIT.delay,Signal failure on the light rail
+TRANSIT.closure,Ferry services suspended due to high seas
+TRANSIT.delay,Overcrowding at the transit hub
+TRANSIT.accident,Tram collided with a delivery van
+TRANSIT.delay,Mechanical failure on the morning train
+TRANSIT.closure,Platform 3 closed for repairs
+TRANSIT.delay,Security incident on the commuter rail
+TRANSIT.hazard,Ice on the station platforms
+TRANSIT.delay,Staff strike affecting all bus routes
+TRANSIT.closure,Air-train link suspended for testing
+TRANSIT.delay,Medical emergency on the subway
+TRANSIT.accident,Bus slid off the road into a ditch
+TRANSIT.delay,Switching issues at the rail junction
+TRANSIT.closure,Night bus service cancelled for holiday
+TRANSIT.delay,Freight train blocking the commuter path
+EVENT.protest,Large gathering at City Hall
+EVENT.marathon,Road closures for the annual race
+EVENT.concert,Heavy foot traffic near the arena
+EVENT.festival,Street fair on Market Street
+EVENT.vip,Motorcade passing through the city center
+EVENT.sports,Stadium exit crowds causing delays
+EVENT.parade,Holiday parade starting at 10 AM
+EVENT.market,Farmers market blocking the square
+EVENT.rally,Political rally in the public park
+EVENT.fireworks,Crowds gathering for the light show
+EVENT.conference,Shuttle buses active for the tech summit
+EVENT.ceremony,Memorial service at the cathedral
+EVENT.exhibition,Museum opening causing parking issues
+EVENT.film,Street filming taking place on 4th St
+EVENT.construction,Grand opening of the new library
+EVENT.protest,March moving toward the capitol
+EVENT.carnival,Temporary rides set up in the lot
+EVENT.marathon,Finish line setup at the park
+EVENT.concert,Outdoor stage setup in the plaza
+EVENT.sports,Cyclists on the road for the tour
+ENV.air,Poor air quality warning for sensitive groups
+ENV.pollen,High pollen count reported today
+ENV.pollution,Chemical spill in the local creek
+ENV.earthquake,Magnitude 3.2 tremor felt in the city
+ENV.landslide,Mudslide blocking the canyon road
+ENV.smoke,Smoke from distant wildfires in the air
+ENV.erosion,Beach erosion warning for coastal homes
+ENV.wildlife,Coyote sightings in the neighborhood
+ENV.air,Smog alert for the downtown area
+ENV.pollen,Extreme ragweed levels detected
+ENV.earthquake,Aftershock reported near the epicenter
+ENV.pollution,Illegal dumping found in the forest
+ENV.landslide,Rocks falling on the mountain highway
+ENV.wildlife,Bear spotted near the hiking trail
+ENV.smoke,Haze reducing visibility across the bay
+ENV.air,Ozone alert for the metropolitan region
+ENV.pollen,Tree pollen levels at seasonal high
+ENV.earthquake,Slight vibration reported in high-rises
+ENV.pollution,Oil slick spotted in the harbor
+ENV.wildlife,Deer hazard on the rural roads
