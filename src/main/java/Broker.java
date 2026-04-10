@@ -1,6 +1,5 @@
 import java.io.FileInputStream;
 import java.security.KeyStore;
-import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,8 +13,7 @@ public class Broker {
 
 	public static final int PORT = 8443;
 	private static final String KEYSTORE_FILE = "cert.jks";
-	private static final String KEYSTORE_PASSWORD = Optional.ofNullable(System.getenv("KEYSTORE_PASSWORD"))
-			.orElseThrow(() -> new IllegalStateException("Environment variable 'KEYSTORE_PASSWORD' is not set"));
+	private static final String KEYSTORE_PASSWORD = "secret"; // Temporarily hardcoded password
 	private static final String CERT_ALIAS = "servercert";
 	private static final Logger logger = LoggerFactory.getLogger(Broker.class);
 
@@ -51,6 +49,11 @@ public class Broker {
 			connector.start();
 
 			logger.info("Server is running now on port {}", PORT);
+
+			// Keep the server running in a loop
+			while (true) {
+				Thread.sleep(1000); // Prevents the main thread from exiting
+			}
 		}
 	}
 }

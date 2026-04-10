@@ -3,12 +3,14 @@ import tech.kwik.core.server.ApplicationProtocolConnection;
 import tech.kwik.core.server.ApplicationProtocolConnectionFactory;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class QuicProtocolFactory implements ApplicationProtocolConnectionFactory {
-    
+    private static final Logger logger = LoggerFactory.getLogger(QuicProtocolFactory.class);
+
     // Topic Registry: Maps a Topic Name (e.g., "TRAFFIC.accidents") to a list of active Subscriber Connections.
-    // Uses ConcurrentHashMap and CopyOnWriteArrayList for thread-safety during high-frequency events.
+    // Uses ConcurrentHashMap for thread-safety during high-frequency events.
     private final Map<String, List<QuicProtocolConnection>> topicRegistry = new ConcurrentHashMap<>();
 
     @Override
