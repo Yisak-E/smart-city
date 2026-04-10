@@ -61,6 +61,10 @@ public class SimulatedPublisher {
             reader.readLine(); // Skip header
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
+                if (parts.length < 2) {
+                    logger.warn("Malformed line in CSV: {}", line);
+                    continue; // Skip malformed lines
+                }
                 String topic = parts[0];
                 String event = parts[1];
                 publishEvent(topic, event);
